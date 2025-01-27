@@ -1,0 +1,8 @@
+---
+- name: Установка Nginx
+  become: true
+  ansible.builtin.apt:
+    name: nginx={{ nginx_version }}*
+    state: present
+    update_cache: true
+  notify: Перезагрузка сервиса Nginx

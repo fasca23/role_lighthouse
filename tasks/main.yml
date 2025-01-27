@@ -1,0 +1,11 @@
+---
+- name: Установка Nginx
+  include_tasks: 
+    file: nginx/main.yml
+
+- name: "Notify Handlers"
+  meta: flush_handlers
+
+- name: Установка Lighthouse
+  include_tasks: 
+    file: lighthouse/main.yml
