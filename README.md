@@ -24,14 +24,14 @@ Role_lighthouse
 ----------------
 
 Если уже установлена Unzip:
-
+```
 - name: Установка/Настройка Lighthouse
   hosts: lighthouse
   roles:
     - role_lighthouse
-
+```
 Установить Unzip в pre_tasks:
-
+```
 - name: Установка/Настройка Lighthouse
   hosts: lighthouse
   pre_tasks:
@@ -43,7 +43,7 @@ Role_lighthouse
         update_cache: yes
   roles:
     - role_lighthouse
-
+```
 Лицензия
 -------
 
